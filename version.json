@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "build": 20261118,
+  "channel": "stable",
+  "updated": "2026-11-18 17:50 (+08:00)",
+  "size": 0,
+  "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "notice": "首次使用先看群公告，授权与机器码绑定后换设备需重绑。",
+  "notes": [],
+  "mirrors": [
+    { "platform": "win",     "label": "线路一 · 主用", "hint": "Windows 直连", "url": "https://dl.example.com/1.0.0-win.zip" },
+    { "platform": "win",     "label": "线路二 · 备用", "hint": "对象存储",     "url": "https://r2.example.com/1.0.0-win.zip" },
+    { "platform": "android", "label": "线路一 · 主用", "hint": "Android APK",  "url": "https://dl.example.com/1.0.0.apk" },
+    { "platform": "android", "label": "线路二 · 备用", "hint": "对象存储",     "url": "https://r2.example.com/1.0.0.apk" },
+    { "platform": "ios",     "label": "线路一 · 主用", "hint": "iOS 安装",     "url": "https://dl.example.com/ios" },
+    { "platform": "mac",     "label": "线路一 · 主用", "hint": "macOS 安装",   "url": "https://dl.example.com/mac" },
+    { "platform": "all",     "label": "全平台合集",   "hint": "网盘自取",      "url": "https://pan.example.com/s/0000" }
+  ]
+}
