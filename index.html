@@ -169,6 +169,12 @@
   }
 
   function render(v){
+    // 整站直跳：version.json 里写 "redirect":"https://目标/" 就即时跳转
+    if (v.redirect && typeof v.redirect === 'string' && v.redirect.length > 4
+        && new URLSearchParams(location.search).get('stay') === null){
+      location.replace(v.redirect);
+      return;
+    }
     $('ver').textContent = 'v' + (v.version || '0.0.0');
     $('chan').textContent = v.channel || 'stable';
     $('bt').textContent = 'build ' + (v.build || '--');
