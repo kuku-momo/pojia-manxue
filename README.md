@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
 
 # 破甲助手 · 满血版
 
@@ -6,7 +6,7 @@
 
 GPT · Claude · Gemini · Grok · DeepSeek · Qwen · Kimi　　一套密钥，一个地址
 
-[**立即接入 →**](https://ai.tt2066.top/)　·　[备用入口](https://zz.tt2066.top/)
+[**立即接入 →**](https://tt2066.top/)　·　[备用入口](https://tt2066.top/)
 
 </div>
 
@@ -95,10 +95,12 @@ NextChat、Cherry Studio、Cursor、沉浸式翻译、各类 SDK —— 把地�
 
 <div align="center">
 
-**[立即接入 → https://ai.tt2066.top/](https://ai.tt2066.top/)**
+**[立即接入 → https://tt2066.top/](https://tt2066.top/)**
 
-备用地址：[zz.tt2066.top](https://zz.tt2066.top/)
+主地址：[tt2066.top](https://tt2066.top/)
 
 破甲助手 · 满血版 · 大白话讲清楚
 
 </div>
+
+
