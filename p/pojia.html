@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>破甲助手怎么用？一个 base_url 接入 GPT/Claude/Gemini | AI 接口中转站</title>
+<meta name="description" content="破甲助手使用教程：注册领密钥，把 base_url 改成中转地址即可兼容 OpenAI 协议，NextChat、Cherry Studio、Cursor、沉浸式翻译直接可用。">
+<meta name="keywords" content="破甲助手,破甲助手怎么用,pOJia,AI中转站,OpenAI兼容">
+<meta name="theme-color" content="#0a0b10">
+<link rel="canonical" href="https://zz.tt2066.top/p/pojia.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="破甲助手 · 满血版">
+<meta property="og:title" content="破甲助手怎么用？一个 base_url 接入 GPT/Claude/Gemini | AI 接口中转站">
+<meta property="og:description" content="破甲助手使用教程：注册领密钥，把 base_url 改成中转地址即可兼容 OpenAI 协议，NextChat、Cherry Studio、Cursor、沉浸式翻译直接可用。">
+<meta property="og:url" content="https://zz.tt2066.top/p/pojia.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="破甲助手怎么用？一个 base_url 接入 GPT/Claude/Gemini | AI 接口中转站">
+<meta name="twitter:description" content="破甲助手使用教程：注册领密钥，把 base_url 改成中转地址即可兼容 OpenAI 协议，NextChat、Cherry Studio、Cursor、沉浸式翻译直接可用。">
+<link rel="icon" href="data:,">
+
+<style>
+:root{--bg:#0a0b10;--panel:#111520;--line:#1d2433;--txt:#e8ebf3;--dim:#8b93a7;
+--acc:#ff3d5a;--acc2:#ffa53d;--ok:#2ee6a8}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--txt);
+font:15px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+body{background:radial-gradient(1000px 480px at 50% -12%,rgba(255,61,90,.20),transparent 62%),
+radial-gradient(820px 420px at 88% 6%,rgba(79,139,255,.12),transparent 60%),var(--bg)}
+.wrap{max-width:860px;margin:0 auto;padding:26px 18px 72px}
+nav{display:flex;align-items:center;gap:12px;margin-bottom:40px;flex-wrap:wrap}
+.logo{width:42px;height:42px;border-radius:12px;background:linear-gradient(145deg,var(--acc),#8e0e24);
+display:grid;place-items:center;font-weight:800;font-size:16px;box-shadow:0 10px 26px rgba(255,61,90,.30)}
+.brand{font-weight:700;font-size:16px}
+.brand small{display:block;color:var(--dim);font-weight:400;font-size:11.5px}
+nav .sp{flex:1}
+a.ghost{padding:7px 14px;border-radius:10px;border:1px solid var(--line);color:var(--dim);
+text-decoration:none;font-size:13px}
+h1{font-size:clamp(26px,5vw,42px);line-height:1.2;margin:0 0 14px;letter-spacing:-1px;font-weight:800}
+h1 .hl{background:linear-gradient(100deg,var(--acc),var(--acc2));-webkit-background-clip:text;
+background-clip:text;color:transparent}
+.lead{color:#b6bdcd;font-size:16px;max-width:660px;margin:0 0 26px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:48px}
+a.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:12px;
+text-decoration:none;font-weight:700;font-size:15px}
+a.btn.p{background:linear-gradient(140deg,var(--acc),#b31032);color:#fff;box-shadow:0 14px 34px rgba(255,61,90,.30)}
+a.btn.s{background:rgba(255,255,255,.05);color:var(--txt);border:1px solid var(--line)}
+h2{font-size:20px;margin:44px 0 14px;letter-spacing:-.3px}
+h3{font-size:15.5px;margin:22px 0 6px}
+p{color:#b6bdcd;margin:0 0 12px}
+.grid{display:grid;grid-template-columns:1fr;gap:12px;margin:16px 0 8px}
+@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));
+border:1px solid var(--line);border-radius:15px;padding:17px}
+.card b{display:block;margin-bottom:5px;font-size:15px}
+.card span{color:var(--dim);font-size:13px;line-height:1.65}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{padding:6px 12px;border-radius:9px;border:1px solid var(--line);background:rgba(255,255,255,.03);
+font-size:12.5px;color:#c3cada}
+pre{background:#0a0c12;border:1px solid var(--line);border-radius:11px;padding:13px 15px;overflow:auto}
+code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12.5px;color:#9fb4d6}
+.final{margin-top:48px;border:1px solid rgba(255,61,90,.32);border-radius:18px;padding:26px 22px;text-align:center;
+background:radial-gradient(600px 220px at 50% 0,rgba(255,61,90,.14),transparent 70%)}
+.final h2{margin:0 0 8px;font-size:20px}
+.final p{font-size:13.5px;margin:0 0 18px;color:var(--dim)}
+.more{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;font-size:13px}
+.more a{color:#9fb4d6;text-decoration:none;border-bottom:1px dashed #2b3852}
+footer{color:#5b6377;font-size:11.5px;text-align:center;margin-top:40px;line-height:1.9}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <div class="logo">破</div>
+  <div class="brand">破甲助手 · 满血版<small>AI 统一接口中转站</small></div>
+  <div class="sp"></div>
+  <a class="ghost" href="https://ai.tt2066.top/">进入站点</a>
+</nav>
+<h1>破甲助手，<span class="hl">一个地址接完所有模型</span></h1>
+<p class="lead">拿一串密钥、填一个 base_url，任何支持 OpenAI 协议的客户端立刻可用。</p>
+<div class="cta">
+  <a class="btn p" href="https://ai.tt2066.top/">立即接入 →</a>
+  <a class="btn s" href="#how">三步接入</a>
+</div>
+
+<h2>破甲助手是什么</h2>
+<p>破甲助手是一个 AI 接口中转站：把 GPT、Claude、Gemini、Grok、DeepSeek 这些模型收进同一个地址，
+你只要拿一串密钥、填一个 base_url，就能在任何支持 OpenAI 协议的客户端里调用。</p>
+
+<div class="grid">
+<div class="card"><b>多模型一个入口</b><span>切模型只改 model 字段，不用分别申请一堆账号，也不用在平台之间来回切。</span></div>
+<div class="card"><b>兼容 OpenAI 协议</b><span>base_url 指过来即可，OpenAI SDK、NextChat、Cherry Studio、Cursor、沉浸式翻译全部直接可用。</span></div>
+<div class="card"><b>流式输出</b><span>SSE 逐字返回，聊天类应用体感与官方一致，不憋稿。</span></div>
+<div class="card"><b>额度按量计费</b><span>用多少扣多少，团队共用一份额度，不必给每人单独开号。</span></div>
+<div class="card"><b>密钥集中管理</b><span>一把密钥分发，随时单独吊销，用量明细后台可查。</span></div>
+<div class="card"><b>多线路兜底</b><span>上游抖动自动切换线路，重试放在中转层，客户端不用写容灾。</span></div>
+</div>
+
+<h2>破甲助手支持哪些客户端</h2>
+<div class="chips">
+<span class="chip">OpenAI 官方 SDK</span><span class="chip">NextChat</span><span class="chip">Cherry Studio</span>
+<span class="chip">Cursor</span><span class="chip">沉浸式翻译</span><span class="chip">LobeChat</span>
+<span class="chip">Chatbox</span><span class="chip">任何自定义 base_url 的客户端</span>
+</div>
+
+<h2 id="how">三步接入</h2>
+<h3>第一步：注册领密钥</h3>
+<p>打开站点注册，控制台生成 API Key。</p>
+<h3>第二步：换掉 base_url</h3>
+<pre><code>from openai import OpenAI
+
+client = OpenAI(
+    api_key="sk-你的密钥",
+    base_url="https://ai.tt2066.top/v1"
+)</code></pre>
+<h3>第三步：照常调用</h3>
+<pre><code>resp = client.chat.completions.create(
+    model="claude-sonnet-4",
+    messages=[{"role": "user", "content": "你好"}],
+    stream=True
+)</code></pre>
+
+<div class="more">
+<a href="https://zz.tt2066.top/">返回首页</a>
+<a href="https://zz.tt2066.top/p/manxue.html">破甲满血是什么</a>
+</div>
+
+<div class="final">
+  <h2>破甲满血，现在接入</h2>
+  <p>注册 → 领密钥 → 换一个 base_url，十分钟跑起来。</p>
+  <a class="btn p" href="https://ai.tt2066.top/">进入 破甲助手</a>
+</div>
+<footer>
+破甲助手 · 满血版 · 大白话讲清楚<br>
+<a href="https://zz.tt2066.top/" style="color:#8b93a7">首页</a> ·
+<a href="https://zz.tt2066.top/p/manxue.html" style="color:#8b93a7">破甲满血</a> ·
+<a href="https://zz.tt2066.top/p/pojia.html" style="color:#8b93a7">破甲助手</a> ·
+<a href="https://zz.tt2066.top/p/dabaihua.html" style="color:#8b93a7">大白话破甲</a>
+</footer>
+</div>
+</body>
+</html>
