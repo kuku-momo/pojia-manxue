@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.tt2066.top/sitemap.xml
+Sitemap: https://zz.tt2066.top/sitemap.xml
