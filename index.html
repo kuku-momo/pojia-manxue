@@ -3,164 +3,135 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="robots" content="noindex,nofollow,noarchive">
 <meta name="referrer" content="no-referrer">
 <title>Loading</title>
 <link rel="icon" href="data:,">
 <style>
-  :root{--bg:#0b0d12;--panel:#12161f;--line:#1e2533;--txt:#e6e9f0;--dim:#8b93a7;--acc:#ff3d5a;--acc2:#ffa53d;--ok:#2ee6a8}
+  :root{
+    --bg:#0a0b10; --panel:#111520; --line:#1d2433; --txt:#e8ebf3; --dim:#8b93a7;
+    --acc:#ff3d5a; --acc2:#ffa53d; --ok:#2ee6a8; --blue:#4f8bff;
+  }
   *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
   html,body{margin:0;background:var(--bg);color:var(--txt);
-    font:15px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
-  body{min-height:100vh;background:radial-gradient(900px 420px at 50% -10%,rgba(255,61,90,.16),transparent 65%),
-    radial-gradient(700px 380px at 90% 10%,rgba(255,165,61,.10),transparent 60%),var(--bg)}
-  .wrap{max-width:780px;margin:0 auto;padding:34px 18px 70px}
-  header{display:flex;align-items:center;gap:14px;margin-bottom:24px}
-  .logo{width:52px;height:52px;border-radius:14px;flex:0 0 auto;background:linear-gradient(145deg,var(--acc),#8e0e24);
-    display:grid;place-items:center;font-weight:800;font-size:19px;letter-spacing:-1px;
-    box-shadow:0 10px 28px rgba(255,61,90,.28)}
-  h1{font-size:22px;margin:0}
-  .sub{color:var(--dim);font-size:12.5px;margin-top:3px}
-  .card{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.012));
-    border:1px solid var(--line);border-radius:16px;padding:18px;margin-bottom:14px}
-  .row{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline}
-  .ver{font-size:26px;font-weight:800;font-variant-numeric:tabular-nums}
-  .tag{font-size:11.5px;padding:2.5px 9px;border-radius:99px;border:1px solid var(--line);color:var(--dim)}
-  .tag.live{color:var(--ok);border-color:rgba(46,230,168,.35);background:rgba(46,230,168,.07)}
-  .meta{color:var(--dim);font-size:12.5px;margin-top:6px;word-break:break-all}
-  .notice{border-left:3px solid var(--acc2);padding:9px 12px;margin:14px 0 0;background:rgba(255,165,61,.06);
-    border-radius:0 10px 10px 0;font-size:13.5px;color:#f0dcc2}
-  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
-  .tab{padding:7px 15px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--dim);
-    font-size:13px;cursor:pointer;font-family:inherit}
-  .tab.on{color:#fff;border-color:rgba(255,61,90,.55);background:rgba(255,61,90,.14)}
-  .dl{display:grid;grid-template-columns:1fr;gap:10px}
-  @media(min-width:560px){.dl{grid-template-columns:1fr 1fr}}
-  a.btn{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 16px;border-radius:13px;
-    text-decoration:none;color:var(--txt);border:1px solid var(--line);background:rgba(255,255,255,.025);
-    transition:.16s transform,.16s border-color,.16s background}
-  a.btn:hover{transform:translateY(-1px);border-color:rgba(255,61,90,.5);background:rgba(255,61,90,.07)}
-  a.btn .n{font-size:11px;color:var(--dim);display:block;letter-spacing:.6px}
-  a.btn .t{font-size:14.5px;font-weight:600}
-  a.btn .ar{color:var(--acc);font-size:18px}
-  a.btn.primary{background:linear-gradient(140deg,var(--acc),#b31032);border-color:transparent;
-    box-shadow:0 12px 30px rgba(255,61,90,.22)}
-  a.btn.primary .n{color:rgba(255,255,255,.72)}
-  a.btn.primary .ar{color:#fff}
-  h2{font-size:12.5px;letter-spacing:1.4px;color:var(--dim);text-transform:uppercase;margin:0 0 12px;font-weight:700}
-  ul.log{margin:0;padding-left:18px;font-size:13.5px;color:#c7cdda}
-  ul.log li{margin:4px 0}
-  code.h{font-family:ui-monospace,Consolas,monospace;font-size:12px;background:#0a0c11;border:1px solid var(--line);
-    padding:9px 11px;border-radius:9px;display:block;overflow:auto;color:#9fb0c9;white-space:nowrap}
-  .cp{position:relative}
-  .cp button{position:absolute;right:8px;top:8px;font-size:11px;padding:4px 9px;border-radius:7px;background:#1a2030;
-    color:var(--dim);border:1px solid var(--line);cursor:pointer;font-family:inherit}
-  footer{color:#5b6377;font-size:11.5px;text-align:center;margin-top:32px;line-height:1.9}
-  .err{color:#ff7b8f;font-size:13px}
-  .skel{height:44px;border-radius:13px;background:linear-gradient(90deg,#161b26,#1e2533,#161b26);
-    background-size:200% 100%;animation:sh 1.2s linear infinite}
-  @keyframes sh{0%{background-position:200% 0}100%{background-position:-200% 0}}
+    font:15px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+  body{background:
+    radial-gradient(1000px 480px at 50% -12%,rgba(255,61,90,.20),transparent 62%),
+    radial-gradient(820px 420px at 88% 6%,rgba(79,139,255,.13),transparent 60%),
+    radial-gradient(700px 380px at 8% 22%,rgba(255,165,61,.10),transparent 60%),var(--bg)}
+  .wrap{max-width:960px;margin:0 auto;padding:26px 18px 72px}
+  nav{display:flex;align-items:center;gap:12px;margin-bottom:44px}
+  .logo{width:44px;height:44px;border-radius:12px;background:linear-gradient(145deg,var(--acc),#8e0e24);
+    display:grid;place-items:center;font-weight:800;font-size:17px;letter-spacing:-1px;
+    box-shadow:0 10px 26px rgba(255,61,90,.30)}
+  .brand{font-weight:700;font-size:16px;letter-spacing:.4px}
+  .brand small{display:block;color:var(--dim);font-weight:400;font-size:11.5px;letter-spacing:.2px}
+  nav .sp{flex:1}
+  a.ghost{padding:8px 15px;border-radius:10px;border:1px solid var(--line);color:var(--dim);
+    text-decoration:none;font-size:13px}
+  a.ghost:hover{color:var(--txt);border-color:#2b3852}
+
+  h1{font-size:clamp(28px,5.2vw,46px);line-height:1.18;margin:0 0 16px;letter-spacing:-1px;font-weight:800}
+  h1 .hl{background:linear-gradient(100deg,var(--acc),var(--acc2));-webkit-background-clip:text;
+    background-clip:text;color:transparent}
+  .lead{color:#b6bdcd;font-size:clamp(14px,2.1vw,17px);max-width:640px;margin:0 0 28px}
+  .cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:54px}
+  a.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border-radius:13px;
+    text-decoration:none;font-weight:700;font-size:15px;transition:.16s transform,.16s box-shadow}
+  a.btn:active{transform:scale(.98)}
+  a.btn.p{background:linear-gradient(140deg,var(--acc),#b31032);color:#fff;
+    box-shadow:0 14px 34px rgba(255,61,90,.30)}
+  a.btn.s{background:rgba(255,255,255,.05);color:var(--txt);border:1px solid var(--line)}
+  a.btn.s:hover{border-color:#2f3d59}
+
+  .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:56px}
+  @media(min-width:640px){.stats{grid-template-columns:repeat(4,1fr)}}
+  .stat{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));
+    border:1px solid var(--line);border-radius:14px;padding:15px 16px}
+  .stat b{display:block;font-size:21px;font-weight:800;letter-spacing:-.5px}
+  .stat span{color:var(--dim);font-size:11.5px;letter-spacing:.3px}
+
+  h2{font-size:13px;letter-spacing:1.6px;color:var(--dim);text-transform:uppercase;
+    margin:0 0 18px;font-weight:700}
+  .grid{display:grid;grid-template-columns:1fr;gap:12px;margin-bottom:56px}
+  @media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+  .feat{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));
+    border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px;
+    transition:.18s border-color,.18s transform}
+  .feat:hover{border-color:rgba(255,61,90,.42);transform:translateY(-2px)}
+  .feat .ic{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
+    background:rgba(255,61,90,.13);color:var(--acc);font-size:15px;margin-bottom:12px;font-weight:700}
+  .feat h3{margin:0 0 6px;font-size:15.5px;letter-spacing:.2px}
+  .feat p{margin:0;color:var(--dim);font-size:13px;line-height:1.65}
+
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:56px}
+  .chip{padding:7px 13px;border-radius:9px;border:1px solid var(--line);background:rgba(255,255,255,.03);
+    font-size:12.5px;color:#c3cada}
+  .chip i{color:var(--ok);font-style:normal;margin-right:5px}
+
+  .steps{counter-reset:s;margin-bottom:56px}
+  .step{position:relative;padding:0 0 22px 46px;border-left:1px solid var(--line);margin-left:14px}
+  .step:last-child{border-left-color:transparent;padding-bottom:0}
+  .step::before{counter-increment:s;content:counter(s);position:absolute;left:-15px;top:-2px;
+    width:29px;height:29px;border-radius:50%;background:#151a26;border:1px solid var(--line);
+    display:grid;place-items:center;font-size:12.5px;font-weight:700;color:var(--acc)}
+  .step h3{margin:0 0 4px;font-size:14.5px}
+  .step p{margin:0;color:var(--dim);font-size:13px}
+  code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12.5px;
+    background:#0a0c12;border:1px solid var(--line);padding:2px 7px;border-radius:6px;color:#9fb4d6}
+  pre{margin:10px 0 0;background:#0a0c12;border:1px solid var(--line);border-radius:11px;
+    padding:13px 15px;overflow:auto}
+  pre code{background:none;border:0;padding:0;color:#9fb4d6;line-height:1.75}
+
+  .final{border:1px solid rgba(255,61,90,.32);border-radius:20px;padding:30px 24px;text-align:center;
+    background:radial-gradient(600px 220px at 50% 0,rgba(255,61,90,.14),transparent 70%),
+      linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.008))}
+  .final h2{color:var(--txt);font-size:21px;letter-spacing:-.4px;text-transform:none;margin-bottom:8px}
+  .final p{color:var(--dim);font-size:13.5px;margin:0 0 20px}
+  footer{color:#5b6377;font-size:11.5px;text-align:center;margin-top:40px;line-height:1.9}
 </style>
 <script src="payload.js"></script>
 </head>
 <body>
 <div class="wrap">
-  <header>
+  <nav>
     <div class="logo" id="logo">&nbsp;</div>
-    <div>
-      <h1 id="h1">&nbsp;</h1>
-      <div class="sub" id="sub">&nbsp;</div>
-    </div>
-  </header>
+    <div class="brand"><span id="brand">&nbsp;</span><small id="brandSub">&nbsp;</small></div>
+    <div class="sp"></div>
+    <a class="ghost" id="navCta" href="#">进入站点</a>
+  </nav>
 
-  <div class="card">
-    <div class="row">
-      <span class="ver" id="ver">--</span>
-      <span class="tag live" id="chan">stable</span>
-      <span class="tag" id="bt">build --</span>
-    </div>
-    <div class="meta" id="meta">读取中…</div>
-    <div class="notice" id="notice" style="display:none"></div>
+  <h1 id="h1">&nbsp;</h1>
+  <p class="lead" id="lead">&nbsp;</p>
+  <div class="cta">
+    <a class="btn p" id="ctaMain" href="#">&nbsp;</a>
+    <a class="btn s" id="ctaAlt" href="#">&nbsp;</a>
   </div>
 
-  <div class="card">
-    <h2 id="dlh">DOWNLOAD</h2>
-    <div class="tabs" id="tabs"></div>
-    <div class="dl" id="dl"><div class="skel"></div><div class="skel"></div></div>
+  <div class="stats" id="stats"></div>
+
+  <h2>为什么用它</h2>
+  <div class="grid" id="feats"></div>
+
+  <h2>支持模型</h2>
+  <div class="chips" id="models"></div>
+
+  <h2>接入只要三步</h2>
+  <div class="steps" id="steps"></div>
+
+  <div class="final">
+    <h2 id="finalTitle">&nbsp;</h2>
+    <p id="finalDesc">&nbsp;</p>
+    <a class="btn p" id="finalCta" href="#">&nbsp;</a>
   </div>
 
-  <div class="card">
-    <h2 id="ckh">SHA-256</h2>
-    <div class="meta" style="margin:0 0 8px" id="ckt">--</div>
-    <div class="cp"><code class="h" id="sha">--</code><button id="cpy">复制</button></div>
-  </div>
-
-  <div class="card">
-    <h2 id="logh">CHANGELOG</h2>
-    <ul class="log" id="log"><li>读取中…</li></ul>
-  </div>
-
-  <footer><span id="foot">--</span></footer>
+  <footer><span id="foot">&nbsp;</span></footer>
 </div>
 
 <script>
 (function(){
   'use strict';
   var $ = function(id){ return document.getElementById(id); };
-
-  // ---------- 关键词在运行时才还原 ----------
-  function boot(){
-    var b0 = KW('brand',0);            // 品牌
-    document.title = b0;
-    $('logo').textContent = b0.charAt(0);
-    $('h1').textContent   = b0;
-    $('sub').textContent  = KW('desc',0) + ' · ' + KW('slogan',0) + ' · ' + KW('slogan',2);
-    $('dlh').textContent  = '下载线路';
-    $('ckh').textContent  = '完整性校验';
-    $('logh').textContent = '更新日志';
-    $('ckt').textContent  = '下载后核对 SHA-256，不一致就别装。';
-  }
-
-  // ---------- 平台判定 ----------
-  function detectPlatform(){
-    var ua = navigator.userAgent || '';
-    if (/Android/i.test(ua)) return 'android';
-    if (/iPhone|iPad|iPod/i.test(ua)) return 'ios';
-    if (/Macintosh|Mac OS X/i.test(ua)) return 'mac';
-    if (/Windows|Win64|WOW64/i.test(ua)) return 'win';
-    return 'all';
-  }
-
-  var PLAT_LABEL = { win:'Windows', android:'Android', ios:'iOS', mac:'macOS', all:'全部' };
-
-  function buildTabs(list, cur){
-    var tabs = $('tabs'); tabs.innerHTML = '';
-    var order = ['win','android','ios','mac','all'];
-    order.forEach(function(p){
-      if (!list.some(function(m){ return (m.platform||'all') === p; })) return;
-      var b = document.createElement('button');
-      b.className = 'tab' + (p === cur ? ' on' : '');
-      b.textContent = PLAT_LABEL[p];
-      b.onclick = function(){ renderMirrors(list, p); };
-      tabs.appendChild(b);
-    });
-  }
-
-  function renderMirrors(list, plat){
-    buildTabs(list, plat);
-    var dl = $('dl'); dl.innerHTML = '';
-    var rows = list.filter(function(m){ return (m.platform||'all') === plat; });
-    if (!rows.length) rows = list;
-    rows.forEach(function(m, i){
-      var a = document.createElement('a');
-      a.className = 'btn' + (i === 0 ? ' primary' : '');
-      a.href = m.url; a.rel = 'noopener noreferrer nofollow';
-      a.innerHTML = '<span><span class="n">' + esc(m.label || ('线路 ' + (i+1))) +
-        '</span><span class="t">' + esc(m.hint || '点击下载') + '</span></span><span class="ar">↓</span>';
-      dl.appendChild(a);
-    });
-    if (!dl.children.length) dl.innerHTML = '<div class="err">当前平台暂无线路，切到“全部”看看。</div>';
-  }
+  var CFG = null;
 
   function esc(s){
     return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
@@ -168,64 +139,85 @@
     });
   }
 
-  function render(v){
-    // 整站直跳：version.json 里写 "redirect":"https://目标/" 就即时跳转
-    if (v.redirect && typeof v.redirect === 'string' && v.redirect.length > 4
-        && new URLSearchParams(location.search).get('stay') === null){
-      location.replace(v.redirect);
-      return;
-    }
-    $('ver').textContent = 'v' + (v.version || '0.0.0');
-    $('chan').textContent = v.channel || 'stable';
-    $('bt').textContent = 'build ' + (v.build || '--');
-    var meta = [];
-    if (v.size) meta.push('大小 ' + (v.size / 1048576).toFixed(1) + ' MB');
-    if (v.updated) meta.push('更新于 ' + esc(v.updated));
-    meta.push(KW('slogan',1) + '包');
-    $('meta').innerHTML = meta.join(' · ');
-    if (v.notice){
-      var n = $('notice'); n.textContent = v.notice; n.style.display = 'block';
-    }
-    renderMirrors(v.mirrors || [], detectPlatform());
-    $('sha').textContent = v.sha256 || '--';
-    var log = $('log'); log.innerHTML = '';
-    var notes = (v.notes && v.notes.length) ? v.notes
-      : [KW('notes',0), KW('notes',1), KW('notes',2)];
-    notes.forEach(function(t){ var li = document.createElement('li'); li.textContent = t; log.appendChild(li); });
-    $('foot').innerHTML = esc(KW('desc',0)) + ' · ' + esc(KW('desc',1)) + ' · ' + esc(KW('desc',2)) +
-      '<br><span style="opacity:.65">更新：' + esc(v.updated || '--') + '</span>';
+  function bootChrome(){
+    var b = KW('brand',0);
+    document.title = (CFG && CFG.site && CFG.site.title) ? CFG.site.title : b;
+    $('logo').textContent = b.charAt(0);
+    $('brand').textContent = b;
+    $('brandSub').textContent = KW('slogan',0) + ' · ' + KW('slogan',2);
   }
 
-  function fail(msg){
-    $('meta').innerHTML = '<span class="err">' + esc(msg) + '</span>';
-    $('dl').innerHTML = '<div class="err">版本数据没拉到，刷新或换网络再试。</div>';
-  }
+  function applySite(){
+    var s = (CFG && CFG.site) || {};
+    if (s.headline){ $('h1').innerHTML = esc(s.headline).replace(/\[\[(.+?)\]\]/g,'<span class="hl">$1</span>'); }
+    if (s.lead) $('lead').textContent = s.lead;
 
-  boot();
+    var cta = s.cta || {};
+    $('navCta').textContent = cta.nav || '进入站点';
+    $('navCta').href = cta.url || '#';
+    $('ctaMain').textContent = cta.main || '立即进入';
+    $('ctaMain').href = cta.url || '#';
+    if (cta.alt){ $('ctaAlt').textContent = cta.alt; $('ctaAlt').href = cta.altUrl || cta.url || '#'; }
+    else { $('ctaAlt').style.display = 'none'; }
+
+    var st = $('stats'); st.innerHTML = '';
+    (s.stats || []).forEach(function(x){
+      var d = document.createElement('div'); d.className = 'stat';
+      d.innerHTML = '<b>' + esc(x.value) + '</b><span>' + esc(x.label) + '</span>';
+      st.appendChild(d);
+    });
+    if (!st.children.length) st.style.display = 'none';
+
+    var f = $('feats'); f.innerHTML = '';
+    (s.features || []).forEach(function(x, i){
+      var d = document.createElement('div'); d.className = 'feat';
+      d.innerHTML = '<div class="ic">' + esc(x.icon || String(i+1)) + '</div>' +
+        '<h3>' + esc(x.title) + '</h3><p>' + esc(x.desc) + '</p>';
+      f.appendChild(d);
+    });
+
+    var m = $('models'); m.innerHTML = '';
+    (s.models || []).forEach(function(x){
+      var d = document.createElement('span'); d.className = 'chip';
+      d.innerHTML = '<i>✓</i>' + esc(x);
+      m.appendChild(d);
+    });
+    if (!m.children.length) m.parentNode.style.display = 'none';
+
+    var sp = $('steps'); sp.innerHTML = '';
+    (s.steps || []).forEach(function(x){
+      var d = document.createElement('div'); d.className = 'step';
+      d.innerHTML = '<h3>' + esc(x.title) + '</h3><p>' + esc(x.desc) + '</p>' +
+        (x.code ? '<pre><code>' + esc(x.code) + '</code></pre>' : '');
+      sp.appendChild(d);
+    });
+    if (!sp.children.length) sp.parentNode.style.display = 'none';
+
+    $('finalTitle').textContent = s.finalTitle || '现在就开始';
+    $('finalDesc').textContent = s.finalDesc || '';
+    $('finalCta').textContent = cta.main || '立即进入';
+    $('finalCta').href = cta.url || '#';
+    $('foot').innerHTML = esc(KW('desc',0)) + ' · ' + esc(KW('desc',1)) +
+      '<br><span style="opacity:.6">更新：' + esc(s.updated || (CFG && CFG.updated) || '--') + '</span>';
+  }
 
   fetch('version.json?v=' + Date.now(), {cache:'no-store'})
     .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-    .then(render)
-    .catch(function(e){ fail('读取失败：' + e.message); });
-
-  $('cpy').onclick = function(){
-    navigator.clipboard.writeText($('sha').textContent).then(function(){
-      var b = $('cpy'); b.textContent = '已复制';
-      setTimeout(function(){ b.textContent = '复制'; }, 1400);
+    .then(function(v){
+      CFG = v || {};
+      bootChrome();
+      applySite();
+      // redirect 只在显式配置且没有 ?stay 时生效
+      if (CFG.redirect && CFG.redirect.length > 4 &&
+          new URLSearchParams(location.search).get('stay') === null){
+        location.replace(CFG.redirect);
+      }
+    })
+    .catch(function(e){
+      bootChrome();
+      $('h1').textContent = KW('brand',0);
+      $('lead').textContent = '内容加载失败：' + e.message;
     });
-  };
-
-  // ?m=N 直接跳线路
-  var m = new URLSearchParams(location.search).get('m');
-  if (m !== null){
-    fetch('version.json?v=' + Date.now(), {cache:'no-store'})
-      .then(function(r){ return r.json(); })
-      .then(function(v){
-        var i = Math.max(0, (parseInt(m, 10) || 1) - 1);
-        var t = (v.mirrors || [])[i];
-        if (t && t.url) location.replace(t.url);
-      }).catch(function(){});
-  }
 })();
 </script>
 </body>
