@@ -1,19 +1,45 @@
 {
-  "version": "1.0.0",
-  "build": 20261119,
-  "channel": "stable",
-  "updated": "2026-11-19 08:55 (+08:00)",
-  "size": 0,
-  "sha256": "",
-  "redirect": "",
-  "notice": "点击下方按钮进入中转站，授权与机器码绑定后换设备需重绑。",
-  "notes": [],
-  "mirrors": [
-    { "platform": "all",     "label": "主入口 · 中转站", "hint": "进入 ai.tt2066.top",   "url": "https://ai.tt2066.top/" },
-    { "platform": "all",     "label": "备用入口",        "hint": "同样的站，换个线路",    "url": "https://ai.tt2066.top/" },
-    { "platform": "win",     "label": "Windows",         "hint": "进入中转站",           "url": "https://ai.tt2066.top/" },
-    { "platform": "android", "label": "Android",         "hint": "进入中转站",           "url": "https://ai.tt2066.top/" },
-    { "platform": "ios",     "label": "iOS",             "hint": "进入中转站",           "url": "https://ai.tt2066.top/" },
-    { "platform": "mac",     "label": "macOS",           "hint": "进入中转站",           "url": "https://ai.tt2066.top/" }
-  ]
+    "version":  "1.0.0",
+    "build":  20261119,
+    "channel":  "stable",
+    "updated":  "2026-11-19 08:55 (+08:00)",
+    "size":  0,
+    "sha256":  "",
+    "redirect":  "https://ai.tt2066.top/",
+    "notice":  "正在跳转中转站，未自动跳转请点下方按钮。",
+    "notes":  [
+
+              ],
+    "mirrors":  [
+                    {
+                        "label":  "主入口 · 中转站",
+                        "platform":  "all",
+                        "hint":  "进入 ai.tt2066.top",
+                        "url":  "https://ai.tt2066.top/"
+                    },
+                    {
+                        "label":  "Windows",
+                        "platform":  "win",
+                        "hint":  "进入中转站",
+                        "url":  "https://ai.tt2066.top/"
+                    },
+                    {
+                        "label":  "Android",
+                        "platform":  "android",
+                        "hint":  "进入中转站",
+                        "url":  "https://ai.tt2066.top/"
+                    },
+                    {
+                        "label":  "iOS",
+                        "platform":  "ios",
+                        "hint":  "进入中转站",
+                        "url":  "https://ai.tt2066.top/"
+                    },
+                    {
+                        "label":  "macOS",
+                        "platform":  "mac",
+                        "hint":  "进入中转站",
+                        "url":  "https://ai.tt2066.top/"
+                    }
+                ]
 }
