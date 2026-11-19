@@ -1,45 +1,62 @@
 {
-    "version":  "1.0.0",
-    "build":  20261119,
-    "channel":  "stable",
-    "updated":  "2026-11-19 08:55 (+08:00)",
-    "size":  0,
-    "sha256":  "",
-    "redirect":  "https://ai.tt2066.top/",
-    "notice":  "正在跳转中转站，未自动跳转请点下方按钮。",
-    "notes":  [
-
-              ],
-    "mirrors":  [
-                    {
-                        "label":  "主入口 · 中转站",
-                        "platform":  "all",
-                        "hint":  "进入 ai.tt2066.top",
-                        "url":  "https://ai.tt2066.top/"
-                    },
-                    {
-                        "label":  "Windows",
-                        "platform":  "win",
-                        "hint":  "进入中转站",
-                        "url":  "https://ai.tt2066.top/"
-                    },
-                    {
-                        "label":  "Android",
-                        "platform":  "android",
-                        "hint":  "进入中转站",
-                        "url":  "https://ai.tt2066.top/"
-                    },
-                    {
-                        "label":  "iOS",
-                        "platform":  "ios",
-                        "hint":  "进入中转站",
-                        "url":  "https://ai.tt2066.top/"
-                    },
-                    {
-                        "label":  "macOS",
-                        "platform":  "mac",
-                        "hint":  "进入中转站",
-                        "url":  "https://ai.tt2066.top/"
-                    }
-                ]
+  "version": "1.1.0",
+  "build": 20261119,
+  "channel": "stable",
+  "updated": "2026-11-19 09:05 (+08:00)",
+  "redirect": "",
+  "size": 0,
+  "sha256": "",
+  "notice": "",
+  "notes": [],
+  "site": {
+    "title": "破甲助手 · AI 统一接入",
+    "headline": "一个接口，[[打通全部主流模型]]",
+    "lead": "不用自己配密钥、不用维护多套账号，把 GPT、Claude、Gemini、Grok、DeepSeek 这些模型收进同一个地址。换 base_url 就接完，代码不用改。",
+    "cta": {
+      "nav": "进入站点",
+      "main": "立即接入",
+      "alt": "先看看能力",
+      "url": "https://ai.tt2066.top/",
+      "altUrl": "?stay"
+    },
+    "stats": [
+      { "value": "1 个", "label": "统一调用地址" },
+      { "value": "7 类", "label": "模型账号已聚合" },
+      { "value": "OpenAI", "label": "接口完全兼容" },
+      { "value": "按量", "label": "用多少算多少" }
+    ],
+    "features": [
+      { "icon": "⊙", "title": "多模型一个入口", "desc": "GPT、Claude、Gemini、Grok、DeepSeek、Qwen、Kimi 统一走一套接口，切模型只改 model 字段，不用再申请一堆账号。" },
+      { "icon": "⌁", "title": "兼容 OpenAI 协议", "desc": "base_url 指向中转站即可，现有 SDK、开源客户端、插件、脚本全部直接可用，业务代码零改动。" },
+      { "icon": "⚡", "title": "流式输出", "desc": "SSE 流式返回，逐字吐字不憋稿，聊天类应用体感与官方一致。" },
+      { "icon": "◈", "title": "额度按量计费", "desc": "充值额度随用随扣，团队多人共用一份额度，不用给每个成员单独开号。" },
+      { "icon": "⛨", "title": "密钥集中管理", "desc": "一把密钥分发出去，随时单独吊销；谁在用、用了多少都看得见，泄露也不用全场换钥匙。" },
+      { "icon": "↻", "title": "多线路自动兜底", "desc": "上游抖动时自动切换可用线路，重试逻辑放在中转层，客户端不用重复写容灾。" }
+    ],
+    "models": [
+      "GPT 系列", "Claude 系列", "Gemini 系列", "Grok 系列",
+      "DeepSeek 系列", "Qwen 系列", "Kimi 系列", "OpenAI 兼容客户端"
+    ],
+    "steps": [
+      {
+        "title": "注册账号，领取密钥",
+        "desc": "进入站点完成注册，在控制台生成一串 API Key。"
+      },
+      {
+        "title": "把 base_url 换成中转站地址",
+        "desc": "以 OpenAI SDK 为例，只改这一行，其余参数保持原样。",
+        "code": "client = OpenAI(\n    api_key=\"sk-你的密钥\",\n    base_url=\"https://ai.tt2066.top/v1\"\n)"
+      },
+      {
+        "title": "照常调用，切换模型只改 model",
+        "desc": "同一个地址可调不同厂商模型，按需切换，无需再维护多套 SDK。",
+        "code": "resp = client.chat.completions.create(\n    model=\"claude-sonnet-4\",\n    messages=[{\"role\":\"user\",\"content\":\"你好\"}],\n    stream=True\n)"
+      }
+    ],
+    "finalTitle": "现在接入，十分钟跑起来",
+    "finalDesc": "注册 → 拿密钥 → 换一个地址，三步完成。"
+  },
+  "mirrors": [
+    { "platform": "all", "label": "主入口 · 中转站", "hint": "进入 ai.tt2066.top", "url": "https://ai.tt2066.top/" }
+  ]
 }
