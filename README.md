@@ -34,6 +34,22 @@ GPT · Claude · Gemini · Grok · DeepSeek · Qwen · Kimi　　一套密钥，
 
 说人话，它照做。中转站这边只负责把模型接通，指令怎么下是你的自由。
 
+## 全平台接入
+
+一套密钥，一个地址，全设备通用。
+
+| 平台 | 接入方式 |
+| --- | --- |
+| Windows / macOS / Linux | 任意 OpenAI 兼容客户端，或 TT助手 桌面端 |
+| 安卓 / iOS | 手机端 OpenAI 协议客户端，填同一个 base_url |
+| 网页 / 浏览器扩展 | 沉浸式翻译、浏览器 AI 插件等直接填地址 |
+| IDE | Cursor、Continue 等插件指向 base_url 即可 |
+
+同一把密钥在手机和电脑上都能用，换设备不用重新申请。
+base_url：`https://ai.tt2066.top/v1`
+
+→ [立即接入](https://tt2066.top/)
+
 ## 为什么用它
 
 | | |
