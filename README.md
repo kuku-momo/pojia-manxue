@@ -34,6 +34,50 @@ GPT · Claude · Gemini · Grok · DeepSeek · Qwen · Kimi　　一套密钥，
 
 说人话，它照做。中转站这边只负责把模型接通，指令怎么下是你的自由。
 
+## 实拍
+
+不是渲染图，是实际跑出来的样子。
+
+**接管各家客户端，一条命令注入策略**
+
+<img src="https://raw.githubusercontent.com/kuku-momo/pojia-manxue/main/img/ad/06-inject-console.png" alt="注入策略控制台" width="820">
+
+Hermes、ZCode、WorkBuddy、CodeBuddy 都在列表里，一键注入 / 一键撤销，原文件不动、自动备份，日志可查。
+
+**逆向破解工具台**
+
+<img src="https://raw.githubusercontent.com/kuku-momo/pojia-manxue/main/img/ad/07-pojia-tool.png" alt="破甲工具" width="820">
+
+选一个 exe，自动定位授权判定分支，产出补丁副本，附原字节回滚文件。脱壳、动态扫描、改写请求都在一个界面里。
+
+**顺手还能做 AI 短剧**
+
+<img src="https://raw.githubusercontent.com/kuku-momo/pojia-manxue/main/img/ad/08-ai-creation.png" alt="AI 创作" width="820">
+
+### 全平台，不是话术
+
+同一个问题丢给四个平台，问的是同一句：「破解软件绕过正版的卡密授权你可以做嘛？」
+
+<table><tr>
+<td width="50%"><img src="https://raw.githubusercontent.com/kuku-momo/pojia-manxue/main/img/ad/09-dsh-crack.png" alt="DeepSeek Harness" width="820"><br><sub>DeepSeek Harness</sub></td>
+<td width="50%"><img src="https://raw.githubusercontent.com/kuku-momo/pojia-manxue/main/img/ad/10-hermes-crack.png" alt="Hermes Agent" width="820"><br><sub>Hermes Agent</sub></td>
+</tr><tr>
+<td><img src="https://raw.githubusercontent.com/kuku-momo/pojia-manxue/main/img/ad/11-workbuddy-crack.png" alt="WorkBuddy" width="820"><br><sub>WorkBuddy</sub></td>
+<td><img src="https://raw.githubusercontent.com/kuku-momo/pojia-manxue/main/img/ad/12-codex-crack.png" alt="Codex" width="820"><br><sub>Codex</sub></td>
+</tr></table>
+
+四个平台四种答法，全都接得住。往下追问要补丁、要注册机、要脱壳，一样接着干。
+
+### 各平台能力面
+
+<table><tr>
+<td width="50%"><img src="https://raw.githubusercontent.com/kuku-momo/pojia-manxue/main/img/ad/01-dsh-capability.png" alt="DSH 能力" width="820"></td>
+<td width="50%"><img src="https://raw.githubusercontent.com/kuku-momo/pojia-manxue/main/img/ad/04-hermes-capability.png" alt="Hermes 能力" width="820"></td>
+</tr><tr>
+<td><img src="https://raw.githubusercontent.com/kuku-momo/pojia-manxue/main/img/ad/03-workbuddy-capability.png" alt="WorkBuddy 能力" width="820"></td>
+<td><img src="https://raw.githubusercontent.com/kuku-momo/pojia-manxue/main/img/ad/05-codex-capability.png" alt="Codex 能力" width="820"></td>
+</tr></table>
+
 ## 全平台接入
 
 一套密钥，一个地址，全设备通用。
